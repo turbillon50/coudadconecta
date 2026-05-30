@@ -1,0 +1,49 @@
+{
+  "name": "CiudadConecta — Tu ciudad, conectada",
+  "short_name": "CiudadConecta",
+  "description": "Descubre los mejores negocios, promociones y eventos locales de tu ciudad. Un concierge digital para Cancún.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f9f9fc",
+  "theme_color": "#006a62",
+  "lang": "es-MX",
+  "dir": "ltr",
+  "categories": ["lifestyle", "travel", "navigation", "business"],
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Mapa interactivo",
+      "short_name": "Mapa",
+      "url": "/mapa",
+      "description": "Explora negocios en el mapa"
+    },
+    {
+      "name": "Promociones",
+      "short_name": "Promos",
+      "url": "/promociones",
+      "description": "Cupones y descuentos cerca de ti"
+    },
+    {
+      "name": "Panel de negocio",
+      "short_name": "Negocio",
+      "url": "/negocio",
+      "description": "Administra tu negocio"
+    }
+  ]
+}
