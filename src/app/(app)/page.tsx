@@ -23,7 +23,7 @@ export default function HomePage() {
         <section className="group relative h-48 w-full overflow-hidden rounded-xl shadow-lg md:h-80">
           <Image
             src="https://images.unsplash.com/photo-1510097467424-192d713fd8b2?auto=format&fit=crop&w=1400&q=70"
-            alt="Vista del Caribe en Cancún"
+            alt="Descubre lo mejor de tu ciudad en México"
             fill
             priority
             sizes="100vw"
@@ -33,7 +33,7 @@ export default function HomePage() {
             <h2 className="mb-1 text-headline-md font-semibold text-white md:text-headline-lg">
               Descubre lo mejor de tu ciudad
             </h2>
-            <p className="text-label-md text-white/80">Explora destinos locales únicos en Cancún</p>
+            <p className="text-label-md text-white/80">Explora destinos locales únicos en México</p>
           </div>
         </section>
       </div>

@@ -11,7 +11,7 @@ const inter = Inter({
 
 const APP_NAME = "CiudadConecta";
 const APP_DESCRIPTION =
-  "Descubre los mejores negocios, promociones y eventos locales de tu ciudad. Tu concierge digital para Cancún.";
+  "Descubre los mejores negocios, promociones y eventos locales de tu ciudad. Tu concierge digital en México.";
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://ciudadconecta.vercel.app";
 
 export const metadata: Metadata = {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
     apple: [{ url: "/icons/icon.svg" }],
   },
-  keywords: ["Cancún", "negocios locales", "promociones", "cupones", "eventos", "directorio", "mapa"],
+  keywords: ["México", "negocios locales", "promociones", "cupones", "eventos", "directorio", "mapa"],
   openGraph: {
     type: "website",
     locale: "es_MX",

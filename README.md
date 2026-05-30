@@ -1,6 +1,6 @@
 # CiudadConecta
 
-**Tu ciudad, conectada.** PWA de descubrimiento de negocios, promociones y eventos locales — un concierge digital para Cancún.
+**Tu ciudad, conectada.** PWA de descubrimiento de negocios, promociones y eventos locales — un concierge digital en México.
 
 Construida a partir de una entrega visual de Google Stitch (4 mockups HTML + design system "Urban Connectivity Framework") y convertida en una aplicación real, navegable y lista para producción en Vercel.
 

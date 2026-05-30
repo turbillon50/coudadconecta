@@ -17,7 +17,7 @@ import type {
 const img = (id: string, w = 800) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=70`;
 
-export const CITY = "Cancún";
+export const CITY = "México";
 
 export const categories: Category[] = [
   { id: "restaurantes", label: "Restaurantes", icon: "restaurant", tint: "bg-primary-container/20", color: "text-primary" },
