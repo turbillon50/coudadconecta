@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CiudadConecta Cancún - Inicio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f9f9fc",
+                        "outline-variant": "#bacac6",
+                        "inverse-on-surface": "#f0f0f3",
+                        "tertiary-fixed-dim": "#c4c7ca",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#9fc2fe",
+                        "on-surface-variant": "#3c4a47",
+                        "surface-container-high": "#e8e8ea",
+                        "on-tertiary-fixed-variant": "#44474a",
+                        "surface-container-low": "#f3f3f6",
+                        "primary": "#006a62",
+                        "secondary-fixed-dim": "#a7c8ff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#d5e3ff",
+                        "surface-container": "#eeeef0",
+                        "primary-fixed-dim": "#3adccc",
+                        "surface-bright": "#f9f9fc",
+                        "on-primary-fixed-variant": "#005049",
+                        "outline": "#6b7a77",
+                        "primary-container": "#40e0d0",
+                        "tertiary-container": "#c8cacd",
+                        "surface-container-highest": "#e2e2e5",
+                        "on-secondary-fixed-variant": "#1f477b",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dadadc",
+                        "on-secondary-container": "#294f83",
+                        "surface-variant": "#e2e2e5",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1a1c1e",
+                        "surface-tint": "#006a62",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#001b3c",
+                        "error": "#ba1a1a",
+                        "inverse-surface": "#2f3133",
+                        "tertiary": "#5b5f61",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#3adccc",
+                        "tertiary-fixed": "#e0e3e6",
+                        "primary-fixed": "#61f9e9",
+                        "secondary": "#3a5f94",
+                        "on-primary-fixed": "#00201d",
+                        "on-background": "#1a1c1e",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-primary-container": "#006058",
+                        "background": "#f9f9fc",
+                        "on-tertiary-container": "#525558",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "container-margin": "24px",
+                        "stack-sm": "8px",
+                        "section-gap": "64px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "display-md": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-md": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9fc;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface">
+<!-- Top AppBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/70 backdrop-blur-xl shadow-sm">
+<div class="flex items-center justify-between px-container-margin py-stack-md w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<h1 class="text-title-lg font-headline-lg font-bold text-primary">Cancún</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-high transition-colors rounded-full text-on-surface-variant flex items-center justify-center scale-95 active:opacity-80 transition-all">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-20 pb-24 max-w-7xl mx-auto">
+<!-- Search Bar Section -->
+<section class="px-container-margin mb-stack-lg">
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+</div>
+<input class="w-full h-14 pl-12 pr-4 bg-surface-container-low border-none rounded-2xl text-body-md focus:ring-2 focus:ring-primary/20 transition-all shadow-inner" placeholder="¿Qué estás buscando?" type="text"/>
+</div>
+</section>
+<!-- Hero Section -->
+<section class="px-container-margin mb-stack-lg">
+<div class="relative h-48 md:h-80 w-full rounded-3xl overflow-hidden shadow-lg group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A panoramic high-angle view of the turquoise Caribbean sea meeting the white sandy shores of Cancún, Mexico. The scene is bathed in brilliant, warm sunlight, capturing the essence of a tropical paradise. Modern luxury resorts are visible in the distance, framed by clear blue skies. The overall mood is aspirational, vibrant, and serene, matching a high-end digital travel concierge aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2W9FXppXQMEqSPpKhUfPquJoILYAinqaPh_6I7YlJp_j3y9BvEC-LX7LB2blT5eFhpX7IjGlSZFsBF6CClrVM8qZ5KXWP1N71tX4BY3nDt6WROruMibXoTekFZErPPbDcfV-X1C7Xt_WoL_cTkV3Y2wKHzPl9iIOGbVQ9pJlx6g13RjNeZlVMF_YpbgbJ-hclL27Du-ilyaao1VRgiki2NXNuztmpG2SILqXE95rqOf56FePnhVFW5TzTB787e3-nHFwA11HNs7A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-6">
+<h2 class="text-white font-headline-lg-mobile md:text-headline-lg mb-1">Descubre lo mejor de tu ciudad</h2>
+<p class="text-white/80 text-label-md">Explora destinos locales únicos</p>
+</div>
+</div>
+</section>
+<!-- Category Section -->
+<section class="mb-stack-lg">
+<div class="flex items-center justify-between px-container-margin mb-4">
+<h3 class="text-title-lg font-headline-md text-on-surface">Categorías</h3>
+<button class="text-primary text-label-md font-bold">Ver todas</button>
+</div>
+<div class="flex overflow-x-auto gap-6 px-container-margin no-scrollbar">
+<!-- Category Item -->
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="w-16 h-16 rounded-2xl bg-primary-container/20 flex items-center justify-center text-primary group active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="restaurant">restaurant</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Restaurantes</span>
+</div>
+<!-- Category Item -->
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="w-16 h-16 rounded-2xl bg-secondary-container/20 flex items-center justify-center text-secondary group active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="coffee">coffee</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Cafeterías</span>
+</div>
+<!-- Category Item -->
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="w-16 h-16 rounded-2xl bg-tertiary-container/30 flex items-center justify-center text-tertiary group active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="medical_services">medical_services</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Salud</span>
+</div>
+<!-- Category Item -->
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="build">build</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Servicios</span>
+</div>
+<!-- Category Item -->
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary group active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="event">event</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Eventos</span>
+</div>
+<!-- Category Item -->
+<div class="flex flex-col items-center gap-2 shrink-0">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-high flex items-center justify-center text-on-surface-variant group active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="more_horiz">more_horiz</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Más</span>
+</div>
+</div>
+</section>
+<!-- Promociones cerca de ti -->
+<section class="mb-stack-lg">
+<div class="flex items-center justify-between px-container-margin mb-4">
+<h3 class="text-title-lg font-headline-md text-on-surface">Promociones cerca de ti</h3>
+<button class="text-primary text-label-md font-bold">Ver ofertas</button>
+</div>
+<div class="flex overflow-x-auto gap-4 px-container-margin no-scrollbar">
+<!-- Promo Card 1 -->
+<div class="shrink-0 w-72 bg-white rounded-3xl overflow-hidden shadow-sm border border-surface-container-high">
+<div class="relative h-32">
+<img class="w-full h-full object-cover" data-alt="A close-up shot of a steaming cup of latte art coffee on a rustic wooden table in a sun-drenched, modern cafe. The lighting is soft and natural, emphasizing the creamy texture of the milk and the rich brown tones of the coffee. The environment is minimalist and high-end, featuring neutral colors and professional framing, creating a cozy and inviting mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnw7bjcp-zPdWh191F4Y_3fqRcxsYYA10j2PlSgurMmcumHRi0nE2f6XVeozHy4gGSIPTS_mmZJctDxB5ocnTuddib6zCqYJCgvGa3VFtscsXSfguuokwiSAHDo1UgNuqBFGv53xOt4T7No7hh3SD3yglJh5vXvcLcHbkjGd4EMzF3ELUnbpyFLXaWB--gCC2at-mK6EQijgbrIE6CwYg6Yj1oNBNEEZsHh3u8vljCFYBG4svh_tBUGaEkZWU6pe_WBx_kUBnn6Y0"/>
+<div class="absolute top-3 left-3 bg-primary-container text-on-primary-container text-label-sm font-bold px-3 py-1 rounded-full shadow-sm">
+                            -20% DCTO
+                        </div>
+</div>
+<div class="p-4">
+<h4 class="text-body-lg font-bold text-on-surface mb-1">Café Central</h4>
+<p class="text-label-sm text-on-surface-variant line-clamp-1">Válido en todas las bebidas calientes</p>
+<div class="mt-3 flex items-center justify-between">
+<span class="text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> Expira en 2d
+                            </span>
+<button class="text-primary font-bold text-label-md">Reclamar</button>
+</div>
+</div>
+</div>
+<!-- Promo Card 2 -->
+<div class="shrink-0 w-72 bg-white rounded-3xl overflow-hidden shadow-sm border border-surface-container-high">
+<div class="relative h-32">
+<img class="w-full h-full object-cover" data-alt="A vibrant and appetizing plate of authentic Mexican tacos al pastor, garnished with fresh cilantro and onion, presented on a colorful ceramic plate. The lighting is bright and festive, highlighting the textures of the marinated meat and corn tortillas. The background is a clean, modern restaurant interior with a focus on local culinary excellence and high-end food photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8clPQnQckrrxAGQ7qDPtZLEOj3JGaPaTTZuh1Hjnpa6TjXiaQlNO-3DiUw7FY4Gq0_Gpfd_WaM88TxpPsADmilUMF3Ba_wY_i_yKfN9j7-avXiFkQninFPUAxRlr5XBb1e73Upf4LnSw1WyyJl56IhanQjtgZieytV5FQqsHfAIY8fud9pAunlBrD3vhekabWiZz_q3efvBQpBExjx3wcWipftvCVH2_vWkHFDZYBYEU_c2CctVdyuHL2aQgRUa53QSC5RvpqUlg"/>
+<div class="absolute top-3 left-3 bg-secondary-container text-on-secondary-container text-label-sm font-bold px-3 py-1 rounded-full shadow-sm">
+                            2X1 Cenas
+                        </div>
+</div>
+<div class="p-4">
+<h4 class="text-body-lg font-bold text-on-surface mb-1">Taquería El Rey</h4>
+<p class="text-label-sm text-on-surface-variant line-clamp-1">Aplica en tacos seleccionados de 6-9 PM</p>
+<div class="mt-3 flex items-center justify-between">
+<span class="text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> Hoy único día
+                            </span>
+<button class="text-primary font-bold text-label-md">Reclamar</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Lugares Tendencia (Grid Layout) -->
+<section class="mb-stack-lg px-container-margin">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-title-lg font-headline-md text-on-surface">Lugares Tendencia</h3>
+<button class="text-primary text-label-md font-bold">Explorar</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Trending Card 1 -->
+<div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-surface-container-high">
+<div class="relative aspect-video">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An elegant, modern fine-dining restaurant interior with floor-to-ceiling glass windows overlooking a moonlit tropical garden. The lighting is sophisticated, using warm accents and candlelight to create an intimate atmosphere. Minimalist furniture and a clean architectural layout convey a sense of luxury and exclusive urban lifestyle, consistent with a high-end digital concierge vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKNzy9l_Gp9W-WaAWGeWAkICdRSFnix_ELj_pfxyDToJTuh3qe4-deLxLsXgqjqHD5JvgwqNemJ5q1CBHKxCOMbUf0BQWBxUP_vBrMxFU947G7C5bdsbOrNWQ92R1CCxSkTyHN3qt7hs8EeuRbwQTYSSlSywgP2uQYWv1lkOpym-bNYJMP70Osg_a9hhCPA4ekayOHMKwElBXW3gGacgUOQZwjm5TxI5e8iUt57gq7PTaIBklJcSMzp3ost-n6FAluEBIPRDGxyNc"/>
+<button class="absolute top-4 right-4 w-10 h-10 glass-card rounded-full flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-body-lg font-bold text-on-surface">Luna Rooftop Bar</h4>
+<div class="flex items-center gap-1 bg-surface-container-high px-2 py-1 rounded-lg">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm font-bold">4.8</span>
+</div>
+</div>
+<p class="text-label-md text-on-surface-variant mb-4">Comida Mediterránea • $$</p>
+<div class="flex items-center gap-4 text-label-sm text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="distance">distance</span> 1.2 km</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="timer">timer</span> 15 min</span>
+</div>
+</div>
+</div>
+<!-- Trending Card 2 -->
+<div class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-surface-container-high">
+<div class="relative aspect-video">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A serene outdoor yoga studio terrace overlooking the ocean at sunset. The space features minimalist wooden flooring, hanging plants, and soft, atmospheric lighting from lanterns. The sky is painted with shades of pink and orange, creating a peaceful and rejuvenating mood. The high-quality photography highlights the calm, wellness-focused lifestyle of a modern city dweller." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi_wOrUUU6CTGYjDD0Qj7lf4x4BbArasyH0mnYpY_A9dr_2GJAvsNiA0Q2syGWHxbWtRJGTCOzhMFCUGq0azWtTrQH6sKNzb9rjfbihMXDH5RMLBoXOCXxcy9MBofOvSRAkDrBqPkng4xZOXct1gDN-3ki2bsM24mY6sz0N9PwRfdvVQBOJwTB32KfPYl0hb1ICR5oX6kuHmvwKuXWnzhpRtcBbXJgOKWBhtQ92T8WyqHzcqAqV_aaCju0w_VeezyaO0uUv2TrhDo"/>
+<button class="absolute top-4 right-4 w-10 h-10 glass-card rounded-full flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-body-lg font-bold text-on-surface">Oasis Wellness Center</h4>
+<div class="flex items-center gap-1 bg-surface-container-high px-2 py-1 rounded-lg">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm font-bold">4.9</span>
+</div>
+</div>
+<p class="text-label-md text-on-surface-variant mb-4">Spa &amp; Yoga • $$$</p>
+<div class="flex items-center gap-4 text-label-sm text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="distance">distance</span> 2.5 km</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="timer">timer</span> 20 min</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Próximos Eventos -->
+<section class="mb-stack-lg">
+<div class="flex items-center justify-between px-container-margin mb-4">
+<h3 class="text-title-lg font-headline-md text-on-surface">Próximos Eventos</h3>
+<button class="text-primary text-label-md font-bold">Ver calendario</button>
+</div>
+<div class="flex overflow-x-auto gap-4 px-container-margin no-scrollbar">
+<!-- Event Card 1 -->
+<div class="shrink-0 w-80 relative rounded-3xl overflow-hidden aspect-[4/3] group">
+<img class="w-full h-full object-cover" data-alt="A high-energy, crowded outdoor music festival at night with vibrant stage lights in magenta and blue casting a glow over a happy crowd. Laser beams cut through the air, creating a dynamic and exciting atmosphere. The photo is professionally shot with a shallow depth of field, focusing on the electric energy of a city's nightlife and social scene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5aslgIqtTFANzYQrWWiv63vJffPuV1HwRWFeLgcoKUeZbTYizA6Os4dRC2gKeKKjqLvoi6eSv0eFZ9B0oGRkttoQvOWhQOpNy7Wkn6fqU3OF77MBFX0EqyvwI7vTGl7-T9wBasbJ3RuvgspCbzYMGMifUdYzKV2nKLsEfWMiX-FjNQFmOvi1WJyQt7AzT2sZBuoHb7NNogGdCtaWemyQ9eMWfKRn59tQdCEAGfRXo36_bfBb14kKS0QTaHbebDuuMST4ZYXpneI0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 flex flex-col justify-end">
+<div class="mb-2 inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-label-sm">
+<span class="material-symbols-outlined text-xs" data-icon="calendar_today">calendar_today</span> 15 Oct, 20:00
+                        </div>
+<h4 class="text-white text-title-lg font-bold">Festival Jazz Riviera</h4>
+<p class="text-white/70 text-label-md">Teatro de la Ciudad</p>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="shrink-0 w-80 relative rounded-3xl overflow-hidden aspect-[4/3] group">
+<img class="w-full h-full object-cover" data-alt="A sophisticated evening gallery opening featuring large-scale abstract paintings and sculptures. Guests in stylish attire are engaged in conversation under crisp museum-grade lighting. The environment is minimalist and high-end, using a palette of white, wood, and metal, reflecting a vibrant local arts culture and a professional lifestyle aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkTfjKqB8LOxQQRkoitZ5BObZ202N-lzMwNecvU-OinpwAGUspgCV382BQ26GVIlvObFWHFoVbuztIXcjCoTkUw0qmllc1g5f_5SErGMtKiw2ktZzzINsAzYZJrKcZr3JKrZhkhl8oZzYn55ZfV4WeCrr0cutgswczpwfa7Oagruz4fkw9tFFIm7-NVuCtya_9wGQ-Az90ifLkavhksDF93Tf3_CU51jjXV00TDjxUMDuXdMM-9J0j1YP7tkWgcEfYQFVXeNIgSHI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 flex flex-col justify-end">
+<div class="mb-2 inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-white text-label-sm">
+<span class="material-symbols-outlined text-xs" data-icon="calendar_today">calendar_today</span> 18 Oct, 19:00
+                        </div>
+<h4 class="text-white text-title-lg font-bold">Expo Arte Contemporáneo</h4>
+<p class="text-white/70 text-label-md">Galería del Centro</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe pt-2 bg-surface/80 backdrop-blur-2xl border-t border-outline-variant/20 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] rounded-t-xl">
+<!-- Inicio (Active) -->
+<a class="flex flex-col items-center justify-center text-primary font-bold hover:bg-primary-container/20 rounded-full transition-all p-2 scale-90 active:scale-100 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-sm font-label-sm">Inicio</span>
+</a>
+<!-- Explorar -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 hover:bg-primary-container/20 rounded-full transition-all p-2 scale-90 active:scale-100 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="search">search</span>
+<span class="text-label-sm font-label-sm">Explorar</span>
+</a>
+<!-- Mapa -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 hover:bg-primary-container/20 rounded-full transition-all p-2 scale-90 active:scale-100 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="map">map</span>
+<span class="text-label-sm font-label-sm">Mapa</span>
+</a>
+<!-- Promos -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 hover:bg-primary-container/20 rounded-full transition-all p-2 scale-90 active:scale-100 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="sell">sell</span>
+<span class="text-label-sm font-label-sm">Promos</span>
+</a>
+<!-- Perfil -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 hover:bg-primary-container/20 rounded-full transition-all p-2 scale-90 active:scale-100 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="text-label-sm font-label-sm">Perfil</span>
+</a>
+</nav>
+<script>
+        // Simple active state toggle simulation
+        const navItems = document.querySelectorAll('nav a');
+        navItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                navItems.forEach(nav => {
+                    nav.classList.remove('text-primary', 'font-bold');
+                    nav.classList.add('text-on-surface-variant/60');
+                    nav.querySelector('.material-symbols-outlined').style.fontVariationSettings = "'FILL' 0";
+                });
+                item.classList.add('text-primary', 'font-bold');
+                item.classList.remove('text-on-surface-variant/60');
+                item.querySelector('.material-symbols-outlined').style.fontVariationSettings = "'FILL' 1";
+            });
+        });
+
+        // Add some scroll effects to the app bar
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body></html>

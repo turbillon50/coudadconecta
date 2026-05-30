@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CiudadConecta - Business Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f9f9fc",
+                    "outline-variant": "#bacac6",
+                    "inverse-on-surface": "#f0f0f3",
+                    "tertiary-fixed-dim": "#c4c7ca",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#9fc2fe",
+                    "on-surface-variant": "#3c4a47",
+                    "surface-container-high": "#e8e8ea",
+                    "on-tertiary-fixed-variant": "#44474a",
+                    "surface-container-low": "#f3f3f6",
+                    "primary": "#006a62",
+                    "secondary-fixed-dim": "#a7c8ff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#d5e3ff",
+                    "surface-container": "#eeeef0",
+                    "primary-fixed-dim": "#3adccc",
+                    "surface-bright": "#f9f9fc",
+                    "on-primary-fixed-variant": "#005049",
+                    "outline": "#6b7a77",
+                    "primary-container": "#40e0d0",
+                    "tertiary-container": "#c8cacd",
+                    "surface-container-highest": "#e2e2e5",
+                    "on-secondary-fixed-variant": "#1f477b",
+                    "on-secondary": "#ffffff",
+                    "surface-dim": "#dadadc",
+                    "on-secondary-container": "#294f83",
+                    "surface-variant": "#e2e2e5",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#1a1c1e",
+                    "surface-tint": "#006a62",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#001b3c",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#2f3133",
+                    "tertiary": "#5b5f61",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#3adccc",
+                    "tertiary-fixed": "#e0e3e6",
+                    "primary-fixed": "#61f9e9",
+                    "secondary": "#3a5f94",
+                    "on-primary-fixed": "#00201d",
+                    "on-background": "#1a1c1e",
+                    "on-tertiary-fixed": "#191c1e",
+                    "on-primary-container": "#006058",
+                    "background": "#f9f9fc",
+                    "on-tertiary-container": "#525558",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "32px",
+                    "stack-md": "16px",
+                    "container-margin": "24px",
+                    "stack-sm": "8px",
+                    "section-gap": "64px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "title-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "display-md": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-md": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .chart-sparkline {
+            height: 40px;
+            width: 100px;
+            stroke-dasharray: 200;
+            stroke-dashoffset: 200;
+            animation: draw 2s ease-out forwards;
+        }
+        @keyframes draw { to { stroke-dashoffset: 0; } }
+        .fade-in { animation: fadeIn 0.6s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- Desktop Navigation Drawer (Sidebar) -->
+<aside class="hidden md:flex fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest border-r border-outline-variant/30 flex-col py-stack-lg px-stack-md z-40">
+<div class="mb-stack-lg px-2 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">business_center</span>
+</div>
+<span class="text-title-lg font-headline-lg font-bold text-primary">CiudadConecta</span>
+</div>
+<nav class="flex-1 flex flex-col gap-2">
+<a class="flex items-center gap-4 px-4 py-3 rounded-full bg-primary-container text-on-primary-container font-bold transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-label-md font-label-md">Panel de Control</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-label-md font-label-md">Estadísticas</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">sell</span>
+<span class="text-label-md font-label-md">Promociones</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-label-md font-label-md">Mi Perfil</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-label-md font-label-md">Configuración</span>
+</a>
+</nav>
+<div class="mt-auto p-4 rounded-2xl bg-secondary-fixed/30 border border-secondary-fixed">
+<p class="text-label-sm font-label-sm text-secondary mb-2">Plan Pro Activo</p>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-4/5"></div>
+</div>
+<p class="text-[10px] mt-2 opacity-70">22 de 30 días restantes</p>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 p-container-margin pb-32">
+<!-- Header / TopAppBar Mockup -->
+<header class="flex items-center justify-between mb-stack-lg py-stack-md px-2">
+<div>
+<h1 class="text-headline-md font-headline-md text-on-surface">Hola, Café Central</h1>
+<p class="text-label-md font-label-md text-on-surface-variant">Bienvenido a tu panel de administración.</p>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest border-2 border-primary-container">
+<img alt="Café Central Logo" data-alt="A professional close-up of a high-end specialty coffee shop logo displayed on a clean wooden surface. The lighting is warm and cinematic, suggesting a cozy yet premium urban atmosphere. The image uses a palette of rich mahogany browns and creamy whites to align with a sophisticated corporate-lifestyle brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFsUW4qi8PxtWGWzZSoXhDCfcnmR2qJC5mEEAS5QUiyM4ExJ1-MsTmtyXYo-lSxlOo70ai_3dUHQafOMyqQKLHvKVrZ4jb2oq7TfaGXr7FUbotlMcKeGV2HdF1Ov76i6YhfvIwroLDBj-GqH-5BWAgdcpeuUczJL1S75r-EGXNK-auiSdiBaYZ5j6TXOyU1TKBux1RARHls8wxjaMG2t7uDM96MHz8mbMZSlxj3b2K4bpPClLEhfA1X32J6Zb_f50u7cx9sn2D-jo"/>
+</div>
+</div>
+</header>
+<!-- Stats Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-section-gap">
+<!-- Stat Card 1 -->
+<div class="bg-surface-container-lowest p-stack-md rounded-3xl shadow-sm border border-outline-variant/10 fade-in" style="animation-delay: 0.1s">
+<div class="flex justify-between items-start mb-stack-sm">
+<div class="bg-primary/10 p-3 rounded-2xl text-primary">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+<span class="text-label-sm font-label-sm text-primary flex items-center bg-primary/10 px-2 py-1 rounded-full">+12%</span>
+</div>
+<h3 class="text-label-md font-label-md text-on-surface-variant">Visitas al perfil</h3>
+<div class="flex items-end justify-between mt-2">
+<p class="text-headline-lg font-headline-lg">1,245</p>
+<svg class="chart-sparkline" viewbox="0 0 100 40">
+<path d="M0,35 Q20,10 40,30 T80,5 T100,20" fill="none" stroke="#006a62" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-surface-container-lowest p-stack-md rounded-3xl shadow-sm border border-outline-variant/10 fade-in" style="animation-delay: 0.2s">
+<div class="flex justify-between items-start mb-stack-sm">
+<div class="bg-secondary/10 p-3 rounded-2xl text-secondary">
+<span class="material-symbols-outlined">chat_bubble</span>
+</div>
+<span class="text-label-sm font-label-sm text-secondary flex items-center bg-secondary/10 px-2 py-1 rounded-full">+8%</span>
+</div>
+<h3 class="text-label-md font-label-md text-on-surface-variant">Contactos</h3>
+<div class="flex items-end justify-between mt-2">
+<p class="text-headline-lg font-headline-lg">89</p>
+<svg class="chart-sparkline" viewbox="0 0 100 40">
+<path d="M0,30 Q25,35 50,15 T100,5" fill="none" stroke="#3a5f94" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-surface-container-lowest p-stack-md rounded-3xl shadow-sm border border-outline-variant/10 fade-in" style="animation-delay: 0.3s">
+<div class="flex justify-between items-start mb-stack-sm">
+<div class="bg-primary-container/20 p-3 rounded-2xl text-on-primary-container">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-primary-container flex items-center bg-primary-container/20 px-2 py-1 rounded-full">+24%</span>
+</div>
+<h3 class="text-label-md font-label-md text-on-surface-variant">Ventas generadas</h3>
+<div class="flex items-end justify-between mt-2">
+<p class="text-headline-lg font-headline-lg">$12.4k</p>
+<svg class="chart-sparkline" viewbox="0 0 100 40">
+<path d="M0,38 L20,30 L40,32 L60,10 L80,15 L100,2" fill="none" stroke="#40e0d0" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Quick Actions & Progress (Left/Main Column) -->
+<div class="lg:col-span-8 flex flex-col gap-gutter">
+<!-- Quick Actions Grid -->
+<div class="bg-surface-container-lowest p-stack-lg rounded-[32px] border border-outline-variant/10">
+<h2 class="text-title-lg font-headline-lg mb-stack-md">Acciones Rápidas</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-stack-md">
+<button class="flex flex-col items-center justify-center p-stack-md bg-surface-container-low rounded-3xl hover:bg-primary-container/20 transition-all group">
+<span class="material-symbols-outlined text-primary mb-2 group-hover:scale-110 transition-transform">campaign</span>
+<span class="text-label-sm font-label-sm text-center">Publicar Promo</span>
+</button>
+<button class="flex flex-col items-center justify-center p-stack-md bg-surface-container-low rounded-3xl hover:bg-primary-container/20 transition-all group">
+<span class="material-symbols-outlined text-primary mb-2 group-hover:scale-110 transition-transform">add_a_photo</span>
+<span class="text-label-sm font-label-sm text-center">Subir Fotos</span>
+</button>
+<button class="flex flex-col items-center justify-center p-stack-md bg-surface-container-low rounded-3xl hover:bg-primary-container/20 transition-all group">
+<span class="material-symbols-outlined text-primary mb-2 group-hover:scale-110 transition-transform">schedule</span>
+<span class="text-label-sm font-label-sm text-center">Horarios</span>
+</button>
+<button class="flex flex-col items-center justify-center p-stack-md bg-surface-container-low rounded-3xl hover:bg-primary-container/20 transition-all group">
+<span class="material-symbols-outlined text-primary mb-2 group-hover:scale-110 transition-transform">star_rate</span>
+<span class="text-label-sm font-label-sm text-center">Ver Reseñas</span>
+</button>
+</div>
+</div>
+<!-- Recent Activity Feed -->
+<div class="bg-surface-container-lowest p-stack-lg rounded-[32px] border border-outline-variant/10">
+<div class="flex justify-between items-center mb-stack-md">
+<h2 class="text-title-lg font-headline-lg">Actividad Reciente</h2>
+<button class="text-primary text-label-md font-label-md hover:underline">Ver todo</button>
+</div>
+<div class="flex flex-col gap-stack-md">
+<div class="flex items-center gap-4 p-4 border-b border-outline-variant/10 last:border-0">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div class="flex-1">
+<p class="text-body-md font-body-md"><b>Ana López</b> te contactó vía WhatsApp</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Hace 15 min</p>
+</div>
+<button class="px-4 py-2 bg-primary-container/20 text-on-primary-container rounded-full text-label-sm font-label-sm">Responder</button>
+</div>
+<div class="flex items-center gap-4 p-4 border-b border-outline-variant/10 last:border-0">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">star</span>
+</div>
+<div class="flex-1">
+<p class="text-body-md font-body-md"><b>Carlos M.</b> dejó una reseña de 5 estrellas</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Hace 2 horas</p>
+</div>
+<div class="text-primary flex">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Profile Completion & Promo (Right Column) -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<!-- Profile Completion -->
+<div class="glass p-stack-lg rounded-[32px] border border-outline-variant/20 shadow-xl">
+<h2 class="text-title-lg font-headline-lg mb-stack-md">Perfil del Negocio</h2>
+<div class="flex flex-col gap-stack-md">
+<div class="flex justify-between items-center text-label-md font-label-md">
+<span>Completado</span>
+<span class="text-primary">85%</span>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%] rounded-full"></div>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant leading-relaxed">
+                            Agrega tus <b>Redes Sociales</b> para llegar al 100% y obtener mayor visibilidad en el mapa.
+                        </p>
+<button class="w-full py-3 bg-secondary text-on-secondary rounded-full font-bold shadow-md hover:scale-[1.02] transition-transform">
+                            Editar Perfil
+                        </button>
+</div>
+</div>
+<!-- Featured Promo Mini Card -->
+<div class="relative overflow-hidden rounded-[32px] h-64 group shadow-lg">
+<img alt="Special Coffee Promo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A macro shot of a perfectly crafted latte with intricate art on its surface, placed in a modern ceramic cup on a minimalist marble table. The background is softly blurred to emphasize the texture of the foam. The lighting is cool-toned yet vibrant, utilizing a palette of soft whites and deep teal accents to create a high-end, contemporary coffee shop vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ5raIInCKq7KE9AlZ0jW9P91pgQ3mgSohUsGPrrm6X_egXqt_yGLY8I5YokLS6q0VKRik-EXcRwCEZ17n7dXs5Amd1oMHoQ1ohKPBSco9MHH0tGnac-WCOA3reyQR7Wgo-6iwMQKiYGEEEQcMOeXcaYO73JIcxkKigsBnLqGhcqFmpOKc5wcJR-UVflAjwPIC_MtioRPhXhoRKPKFoomCv33h_ntWgXC8OGLSt08fPZ0aoyYWwml6mWsVUUMBydNE8KgSK7Vrqt8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-stack-md">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-label-sm font-label-sm w-fit mb-2">Promo Activa</span>
+<h4 class="text-white font-headline-md">2x1 en Cappuccinos</h4>
+<p class="text-white/80 text-label-sm">Válido hasta el 30 de Mayo</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile Bottom Navigation (Visible only on mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 glass border-t border-outline-variant/10 flex justify-around items-center px-4 pb-safe pt-2">
+<a class="flex flex-col items-center justify-center text-primary font-bold transition-transform active:scale-95 py-2" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-[10px] uppercase tracking-tighter mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 py-2" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] uppercase tracking-tighter mt-1">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 py-2" href="#">
+<span class="material-symbols-outlined">sell</span>
+<span class="text-[10px] uppercase tracking-tighter mt-1">Promos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 py-2" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] uppercase tracking-tighter mt-1">Perfil</span>
+</a>
+</nav>
+<!-- Contextual FAB for Business (Post Promotion) -->
+<button class="fixed bottom-24 right-container-margin md:bottom-8 md:right-8 bg-primary text-on-primary w-14 h-14 rounded-2xl flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all z-40">
+<span class="material-symbols-outlined">add</span>
+</button>
+</body></html>

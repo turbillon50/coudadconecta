@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CiudadConecta - Promociones</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f9f9fc",
+                    "outline-variant": "#bacac6",
+                    "inverse-on-surface": "#f0f0f3",
+                    "tertiary-fixed-dim": "#c4c7ca",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#9fc2fe",
+                    "on-surface-variant": "#3c4a47",
+                    "surface-container-high": "#e8e8ea",
+                    "on-tertiary-fixed-variant": "#44474a",
+                    "surface-container-low": "#f3f3f6",
+                    "primary": "#006a62",
+                    "secondary-fixed-dim": "#a7c8ff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#d5e3ff",
+                    "surface-container": "#eeeef0",
+                    "primary-fixed-dim": "#3adccc",
+                    "surface-bright": "#f9f9fc",
+                    "on-primary-fixed-variant": "#005049",
+                    "outline": "#6b7a77",
+                    "primary-container": "#40e0d0",
+                    "tertiary-container": "#c8cacd",
+                    "surface-container-highest": "#e2e2e5",
+                    "on-secondary-fixed-variant": "#1f477b",
+                    "on-secondary": "#ffffff",
+                    "surface-dim": "#dadadc",
+                    "on-secondary-container": "#294f83",
+                    "surface-variant": "#e2e2e5",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#1a1c1e",
+                    "surface-tint": "#006a62",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#001b3c",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#2f3133",
+                    "tertiary": "#5b5f61",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#3adccc",
+                    "tertiary-fixed": "#e0e3e6",
+                    "primary-fixed": "#61f9e9",
+                    "secondary": "#3a5f94",
+                    "on-primary-fixed": "#00201d",
+                    "on-background": "#1a1c1e",
+                    "on-tertiary-fixed": "#191c1e",
+                    "on-primary-container": "#006058",
+                    "background": "#f9f9fc",
+                    "on-tertiary-container": "#525558",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "32px",
+                    "stack-md": "16px",
+                    "container-margin": "24px",
+                    "stack-sm": "8px",
+                    "section-gap": "64px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "title-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "display-md": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-md": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md min-h-screen pb-32">
+<!-- Top AppBar -->
+<header class="sticky top-0 z-50 bg-surface/70 dark:bg-surface-dim/70 backdrop-blur-xl shadow-sm w-full">
+<div class="flex items-center justify-between px-container-margin py-stack-md w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-headline-md">location_on</span>
+<h1 class="text-title-lg font-headline-lg font-bold text-primary">Cancún</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-high transition-colors rounded-full text-on-surface-variant scale-95 active:opacity-80 transition-all">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-container-margin mt-stack-lg">
+<!-- Header Section -->
+<section class="mb-stack-lg">
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-surface mb-2">Promociones y Cupones</h2>
+<p class="text-body-md text-on-surface-variant">Encuentra los mejores descuentos en tu ciudad.</p>
+</section>
+<!-- Filter Tabs -->
+<nav class="flex gap-2 overflow-x-auto no-scrollbar mb-stack-lg pb-2">
+<button class="px-6 py-2.5 rounded-full bg-primary text-on-primary font-label-md transition-all whitespace-nowrap">Todas</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container text-on-surface-variant font-label-md hover:bg-surface-container-high transition-all whitespace-nowrap">Comida</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container text-on-surface-variant font-label-md hover:bg-surface-container-high transition-all whitespace-nowrap">Belleza</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container text-on-surface-variant font-label-md hover:bg-surface-container-high transition-all whitespace-nowrap">Servicios</button>
+<button class="px-6 py-2.5 rounded-full bg-surface-container text-on-surface-variant font-label-md hover:bg-surface-container-high transition-all whitespace-nowrap">Salud</button>
+</nav>
+<!-- Promotions Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Coupon Card 1 -->
+<div class="bg-surface-container-lowest rounded-[24px] shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow group">
+<div class="relative h-48 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A gourmet artisan burger served on a wooden board with golden crispy fries in a warm sunlit restaurant. The setting is modern and cozy with blurred interior details in the background, dominated by warm oranges and earthy tones. High-end food photography with soft natural lighting and shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRDU2XG5HW5vzU5N5Lmt6S5NxED9-6tCxWIhe14PmFfcQlNuHv7Ns5tVuEpIWWUl8jQDJ88Iziw_ppirgNwiE0NtjOPgnA2fsihnzDPk00wbgSWrEVU83h4MunoMJ8p_eSDw9R4zC18sMn5HQEZDnV4AWgs1Bx0ozkN_J0V2GtuXgDCD1xYjBSn9FLP33zUBkjDaLwfkmGS25lrzfBFOL81daFGyxk74nnrvRtfJtvB7R3qz725-HwdgNn5Hx2PeTFqs3EX9Z0Aeo"/>
+<div class="absolute top-4 left-4 glass-card px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">timer</span>
+<span class="text-label-sm font-label-sm text-primary countdown" data-time="3600">01:00:00</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-title-lg font-headline-md text-on-surface leading-tight">2x1 en Hamburguesas Artesanales</h3>
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-label-sm font-bold">2X1</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-4">The Burger Club - Válido de Lunes a Jueves</p>
+<div class="mt-auto flex items-center gap-3">
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-xl font-label-md hover:bg-primary/90 transition-all active:scale-95">Ver oferta</button>
+<button class="p-3 border border-outline-variant text-primary rounded-xl hover:bg-primary-container/10 transition-all">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Coupon Card 2 -->
+<div class="bg-surface-container-lowest rounded-[24px] shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow group">
+<div class="relative h-48 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxury spa treatment room with soft blue lighting and aromatic candles flickering on a white marble counter. The atmosphere is serene and minimalist with clean white towels and high-end skincare products arranged neatly. High-key lighting creates a professional wellness aesthetic with turquoise accents throughout the scene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6fX4N14RnDm0Yuze5-mBX1Goj8da3a2EjIgn1V7i7nWP7e2j3GPNJtLo9QfTWzkAm_X6o7uWQvLmmbu4_rOqLHvQYau4szqMnd3vnjcOpLAQDYFeyD-iftjHcPkVPVuy6uo5vXtqoAzXltS71rK0iref4-dRZAXTuV7J3XewiIRU9UpASl1ay_ATTt4Nq1cJI9aUBi_Kv3Kcjjkb38lDUh0wl2wImF2us10HvvCzCOTJjcdfPNwq7mgg9PmuFOZCd4Nc2eiSprWc"/>
+<div class="absolute top-4 left-4 glass-card px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">timer</span>
+<span class="text-label-sm font-label-sm text-primary countdown" data-time="7200">02:00:00</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-title-lg font-headline-md text-on-surface leading-tight">40% OFF en Masaje Relajante</h3>
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-label-sm font-bold">40% OFF</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-4">Zen Spa Center - Reserva previa necesaria</p>
+<div class="mt-auto flex items-center gap-3">
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-xl font-label-md hover:bg-primary/90 transition-all active:scale-95">Ver oferta</button>
+<button class="p-3 border border-outline-variant text-primary rounded-xl hover:bg-primary-container/10 transition-all">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Coupon Card 3 -->
+<div class="bg-surface-container-lowest rounded-[24px] shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow group">
+<div class="relative h-48 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A stylish modern coffee shop interior with light wood tables and large windows letting in bright afternoon sunlight. Baristas are visible in the background preparing specialty lattes in a clean minimalist environment. The scene is bright and airy with a sophisticated urban lifestyle vibe and pops of turquoise branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzW5mCydeYYTKGT38pXx_gwu3Z9sMloFKQVh41W3WuZB8RBTPYRsogBA4EksQDQhKPz_z8K-8gDU93M5RaYWDxlSbPStjGUc5oY1mRQHwBBV5ypGC1jBdNzuC-o5NdevbIkf9vlvMCJUJ7SxBW314UKhBoYt4JEDte3UMtGRZobaqhiNVgk10T-tm2R8oIMt39wXHwQeQLgBZ_WgB59isv5Hi3wgAK-3KjiR2HIMW11POPwgiwDmLZfTBFOAZQJSrBQSnEUEuTDTw"/>
+<div class="absolute top-4 left-4 glass-card px-3 py-1 rounded-full flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">local_offer</span>
+<span class="text-label-sm font-label-sm">Especial de Hoy</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-title-lg font-headline-md text-on-surface leading-tight">Café de Especialidad Gratis</h3>
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-label-sm font-bold">GRATIS</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-4">Aroma Roast - En la compra de un postre</p>
+<div class="mt-auto flex items-center gap-3">
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-xl font-label-md hover:bg-primary/90 transition-all active:scale-95">Ver oferta</button>
+<button class="p-3 border border-outline-variant text-primary rounded-xl hover:bg-primary-container/10 transition-all">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Coupon Card 4 -->
+<div class="bg-surface-container-lowest rounded-[24px] shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow group">
+<div class="relative h-48 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-end hair salon with elegant gold mirrors and comfortable leather chairs in a bright white space. Soft diffused lighting illuminates the professional hair care products displayed on glass shelves. The aesthetic is clean, professional, and sophisticated, reflecting a modern corporate beauty experience with deep blue and turquoise highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnmQfkmOovGQUBiDLXOBGM5snXRHLIBcGfjd0qGbfk53QwSoh_GIXf7reTQdSwL29Fx8_Xrcnt22gGtuhLjMKfjJStLHUdZHBefHzDFi1DS4DgkrSiezg4uxrEFfewyLLRqaeovYmwntIYnU3CHINNaa7ncgp-Zak7VTwDzcsjh_YcRQVnGufRw5kdtfO9d0R7m0czWA5UDZZ6-7lHDeW5ee5E1ZdsaJ3kukBZbHDLu9oHCKjzhOFCjntnuJqykm_37yM5R49eCSA"/>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-title-lg font-headline-md text-on-surface leading-tight">20% en Corte y Peinado</h3>
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-label-sm font-bold">-20%</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-4">Studio V - Solo para nuevos clientes</p>
+<div class="mt-auto flex items-center gap-3">
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-xl font-label-md hover:bg-primary/90 transition-all active:scale-95">Ver oferta</button>
+<button class="p-3 border border-outline-variant text-primary rounded-xl hover:bg-primary-container/10 transition-all">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Coupon Card 5 -->
+<div class="bg-surface-container-lowest rounded-[24px] shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow group">
+<div class="relative h-48 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A state-of-the-art gym facility with rows of clean black treadmills and neon blue lighting accents. The space is vast and industrial-chic with polished concrete floors and large mirrors reflecting a motivating fitness environment. The mood is high-energy yet premium, featuring a palette of cool greys and vibrant turquoise details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtQGm3SjgmxPxodyrZSwxgjX4Or7t9JvZvdxbw48q9to2h-6qj84Tu6Fm5NU3I6MpdmSin5QGdSfINtkTy2b3EYoHO7-AB8gSSe5kBmnvRoxKuIkqHofNQZzy3ih3X58OCLDd1HsJ8is16Xbwa3KwO_vGHt1RpOEGb8ZXU-KWTv3sp6L0Nb7pE-IBvLM51SPeHfZHl83xypYCz6lmm06Z6BMxn8O8ycCDeIbfs0O8IJQebWgox5Ru21uwcO7e2lVZGaqYkLAC4tBg"/>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-title-lg font-headline-md text-on-surface leading-tight">Mes Gratis de Gimnasio</h3>
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-label-sm font-bold">PROMO</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-4">Iron Gym - En plan anual</p>
+<div class="mt-auto flex items-center gap-3">
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-xl font-label-md hover:bg-primary/90 transition-all active:scale-95">Ver oferta</button>
+<button class="p-3 border border-outline-variant text-primary rounded-xl hover:bg-primary-container/10 transition-all">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Coupon Card 6 -->
+<div class="bg-surface-container-lowest rounded-[24px] shadow-sm overflow-hidden flex flex-col hover:shadow-md transition-shadow group">
+<div class="relative h-48 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An assortment of colorful Mexican street tacos served on vibrant artisanal plates. The background features a blurred outdoor market setting with warm evening light and festive decor. The food looks fresh and appetizing with vibrant greens from cilantro and limes. A professional food photography style with warm, inviting lighting and high saturation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfUITbltnpZaBCTNwM1DS3dqno8DHIPkTaGkPgAixx1yjAXGSLPlvQjXcNzPFsRPEeQgzQYfgS82uhM3iRlMvwxj4vjjMgzfvuPtvHtqpjJp31XwwQDmDQ1gWwD7f_1n1SgUot_oIG3HUrV2IGo8d_2zTnOvPu65gvusqOpLUrC_jUAEmVoNVZjOTzqOZC2EXUI7wIQYAlFv2HlfZVlclFMz6UwjGet7XeZzvh4bpva3uB-1Hr0OR0vlzgMlYNJIfve81WBzHOOOo"/>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-title-lg font-headline-md text-on-surface leading-tight">Combo Taco Fest - 30% Off</h3>
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-label-sm font-bold">-30%</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-4">Los Primos - Válido fines de semana</p>
+<div class="mt-auto flex items-center gap-3">
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-xl font-label-md hover:bg-primary/90 transition-all active:scale-95">Ver oferta</button>
+<button class="p-3 border border-outline-variant text-primary rounded-xl hover:bg-primary-container/10 transition-all">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-2xl border-t border-outline-variant/20 px-4 pb-safe pt-2 flex justify-around items-center shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 dark:text-on-surface-variant hover:bg-primary-container/20 rounded-full p-2 transition-all scale-90 active:scale-100" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-sm font-label-sm">Inicio</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 dark:text-on-surface-variant hover:bg-primary-container/20 rounded-full p-2 transition-all scale-90 active:scale-100" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-label-sm font-label-sm">Explorar</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 dark:text-on-surface-variant hover:bg-primary-container/20 rounded-full p-2 transition-all scale-90 active:scale-100" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="text-label-sm font-label-sm">Mapa</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim font-bold hover:bg-primary-container/20 rounded-full p-2 transition-all scale-90 active:scale-100" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">sell</span>
+<span class="text-label-sm font-label-sm">Promos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant/60 dark:text-on-surface-variant hover:bg-primary-container/20 rounded-full p-2 transition-all scale-90 active:scale-100" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-label-sm font-label-sm">Perfil</span>
+</a>
+</nav>
+<script>
+        // Simple countdown interaction
+        document.querySelectorAll('.countdown').forEach(el => {
+            let timeLeft = parseInt(el.dataset.time);
+            const updateTimer = () => {
+                const hours = Math.floor(timeLeft / 3600);
+                const minutes = Math.floor((timeLeft % 3600) / 60);
+                const seconds = timeLeft % 60;
+                el.innerText = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+                if (timeLeft > 0) timeLeft--;
+            };
+            setInterval(updateTimer, 1000);
+            updateTimer();
+        });
+
+        // Add active state to category buttons
+        const categoryButtons = document.querySelectorAll('nav button');
+        categoryButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                categoryButtons.forEach(b => {
+                    b.classList.remove('bg-primary', 'text-on-primary');
+                    b.classList.add('bg-surface-container', 'text-on-surface-variant');
+                });
+                btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+                btn.classList.add('bg-primary', 'text-on-primary');
+            });
+        });
+
+        // Save bookmark toggle effect
+        document.querySelectorAll('.material-symbols-outlined').forEach(icon => {
+            if(icon.innerText === 'bookmark') {
+                icon.parentElement.addEventListener('click', function() {
+                    const isFilled = icon.style.fontVariationSettings.includes("'FILL' 1");
+                    icon.style.fontVariationSettings = isFilled ? "'FILL' 0" : "'FILL' 1";
+                    this.classList.toggle('bg-primary-container/30');
+                });
+            }
+        });
+    </script>
+</body></html>
