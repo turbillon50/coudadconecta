@@ -4,7 +4,7 @@ import { MapaClient } from "./MapaClient";
 
 export const metadata: Metadata = {
   title: "Mapa interactivo",
-  description: "Explora negocios, promociones y eventos de Cancún en el mapa interactivo.",
+  description: "Explora negocios, promociones y eventos de México en el mapa interactivo.",
 };
 
 export default function MapaPage() {

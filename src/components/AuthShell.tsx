@@ -35,7 +35,7 @@ export function AuthShell({ children }: { children: React.ReactNode }) {
           </div>
         </div>
 
-        <p className="relative text-label-sm text-on-primary/60">© 2026 CiudadConecta · Cancún, México</p>
+        <p className="relative text-label-sm text-on-primary/60">© 2026 CiudadConecta · México</p>
       </div>
 
       {/* Formulario */}

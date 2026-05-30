@@ -26,7 +26,7 @@ export function MapaClient() {
         {/* Lienzo del mapa (mock; reemplazable por Google Maps) */}
         <Image
           src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1400&q=70"
-          alt="Mapa de Cancún"
+          alt="Mapa de México"
           fill
           sizes="100vw"
           className="object-cover grayscale-[0.15]"

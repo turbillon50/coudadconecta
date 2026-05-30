@@ -22,7 +22,7 @@ export function ExplorarClient() {
       <header className="hidden md:block">
         <h1 className="text-headline-lg font-semibold text-on-surface">Explorar negocios</h1>
         <p className="mt-1 text-body-md text-on-surface-variant">
-          {businesses.length} negocios verificados en Cancún
+          {businesses.length} negocios verificados en México
         </p>
       </header>
 
